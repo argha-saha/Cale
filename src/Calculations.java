@@ -32,6 +32,7 @@ public class Calculations {
 	
 	public static int maximumDays(int month, boolean isLeapYear) {
 		int maxDays = 30;
+		
 		switch (month) {
 			case 1:
 			case 3:
@@ -59,19 +60,29 @@ public class Calculations {
 	}
 	
 	public static int dayNumberEnd(int month, int day, boolean isLeapYear) {
-		int dayNumEnd = 30;
+		int dayNumEnd = 0;
 		
 		switch (month) {
 			case 3:
 			case 5:
 			case 7:
 			case 8:
-			case 10: 
+			case 10:
+				dayNumEnd = day;
+				
 				if (day == 31) {
 					dayNumEnd = 30;
 				}
 				break;
+			case 4:
+			case 6:
+			case 9:
+			case 11:
+				dayNumEnd = day;
+				break;
 			case 2:
+				dayNumEnd = day;
+				
 				if (isLeapYear == true) {
 					if (day == 1) {
 						dayNumEnd = day;
@@ -83,6 +94,8 @@ public class Calculations {
 				}
 				break;
 			case 1:
+				dayNumEnd = day;
+				
 				if (isLeapYear == true) {
 					if (day == 31) {
 						dayNumEnd = 29;

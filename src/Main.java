@@ -29,6 +29,8 @@ public class Main {
 		maxDays = Calculations.maximumDays(month, isLeapYear);
 		
 		Prints.printHeader(dayNumber);
+		
+		Prints.printMonth(day, maxDays, dayNumEnd);
 	}
 
 }
