@@ -10,9 +10,7 @@ public class Main {
 		int year;	// Stores year from date
 		int day;	// Stores date from date
 		
-		int curMonth;
-		int dayNumber;
-		
+		int dayNumber;		
 		int dayNumEnd;
 		int maxDays;
 		boolean isLeapYear;
@@ -26,6 +24,9 @@ public class Main {
 		
 		dayNumber = Calculations.dayNum(month, day, year);
 		isLeapYear = Calculations.leapYear(year);
+		
+		dayNumEnd = Calculations.dayNumberEnd(month, day, isLeapYear);
+		maxDays = Calculations.maximumDays(month, isLeapYear);
 		
 		Prints.printHeader(dayNumber);
 	}
