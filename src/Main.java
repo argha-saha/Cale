@@ -17,9 +17,9 @@ public class Main {
 		
 		date = Inputs.getDate(scanner);
 		
-		month = date / 10000;
-		year = 2000 + (date % 100);
-		day = (date - (month * 10000 + (year - 2000))) / 100;
+		month = date / 1000000;
+		year = date % 1000;
+		day = (date - (month * 1000000 + (year - (year / 1000) * 1000))) / 10000;
 		dayNumEnd = day;
 		
 		dayNumber = Calculations.dayNum(month, day, year);

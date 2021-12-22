@@ -80,6 +80,9 @@ public class Calculations {
 			case 11:
 				dayNumEnd = day;
 				break;
+			case 12:
+				dayNumEnd = day;
+				break;
 			case 2:
 				dayNumEnd = day;
 				

@@ -1,21 +1,29 @@
 
 public class Prints {
 	
+	static final String SUN = "Sun";
+	static final String MON = "Mon";
+	static final String TUE = "Tue";
+	static final String WED = "Wed";
+	static final String THU = "Thu";
+	static final String FRI = "Fri";
+	static final String SAT = "Sat";
+	
 	public static void printHeader(int dayNumber) {
 		switch (dayNumber) {
-			case 0: System.out.println("Header: Sun Mon Tue Wed Thu Fri Sat");
+			case 0: System.out.printf("Header: %4s %4s %4s %4s %4s %4s %4s%n", SUN, MON, TUE, WED, THU, FRI, SAT);
 					break;
-			case 1: System.out.println("Header: Mon Tue Wed Thu Fri Sat Sun");
+			case 1: System.out.printf("Header: %4s %4s %4s %4s %4s %4s %4s%n", MON, TUE, WED, THU, FRI, SAT, SUN);
 					break;
-			case 2: System.out.println("Header: Tue Wed Thu Fri Sat Sun Mon");
+			case 2: System.out.printf("Header: %4s %4s %4s %4s %4s %4s %4s%n", TUE, WED, THU, FRI, SAT, SUN, MON);
 					break;
-			case 3: System.out.println("Header: Wed Thu Fri Sat Sun Mon Tue");
+			case 3: System.out.printf("Header: %4s %4s %4s %4s %4s %4s %4s%n", WED, THU, FRI, SAT, SUN, MON, TUE);
 					break;
-			case 4: System.out.println("Header: Thu Fri Sat Sun Mon Tue Wed");
+			case 4: System.out.printf("Header: %4s %4s %4s %4s %4s %4s %4s%n", THU, FRI, SAT, SUN, MON, TUE, WED);
 					break;
-			case 5: System.out.println("Header: Fri Sat Sun Mon Tue Wed Thu");
+			case 5: System.out.printf("Header: %4s %4s %4s %4s %4s %4s %4s%n", FRI, SAT, SUN, MON, TUE, WED, THU);
 					break;
-			case 6: System.out.println("Header: Sat Sun Mon Tue Wed Thu Fri");
+			case 6: System.out.printf("Header: %4s %4s %4s %4s %4s %4s %4s%n", SAT, SUN, MON, TUE, WED, THU, FRI);
 					break;
 		}
 	}
@@ -26,10 +34,10 @@ public class Prints {
 		int k;
 		
 		for (i = 0; i < 4; i++) {
-			System.out.print("Week " + (i + 1) + ": ");
+			System.out.printf("Week %d:", i + 1);
 			
 			for (j = 0; j < 7; j++) {
-				System.out.print(day++ + " ");
+				System.out.printf("%5d", day++);
 				
 				if (maxDays == 31) {
 					if (day > 31) {
@@ -53,10 +61,10 @@ public class Prints {
 			System.out.println();
 		}
 		
-		System.out.print("Week " + (i + 1) + ": ");
+		System.out.printf("Week %d:", i + 1);
 		
 		for (k = day; k <= dayNumEnd; k++) {
-			System.out.print(day++ + " ");
+			System.out.printf("%5d", day++);
 			
 			if (maxDays == 31) {
 				if (day > 31) {
