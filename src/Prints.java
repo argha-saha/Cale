@@ -1,6 +1,7 @@
 
 public class Prints {
 	
+	// Variables to store day abbreviations
 	static final String SUN = "Sun";
 	static final String MON = "Mon";
 	static final String TUE = "Tue";
@@ -9,6 +10,7 @@ public class Prints {
 	static final String FRI = "Fri";
 	static final String SAT = "Sat";
 	
+	// METHOD printHeader: Prints header based on starting day of week
 	public static void printHeader(int dayNumber) {
 		switch (dayNumber) {
 			case 0: System.out.printf("Header: %4s %4s %4s %4s %4s %4s %4s%n", SUN, MON, TUE, WED, THU, FRI, SAT);
@@ -28,11 +30,13 @@ public class Prints {
 		}
 	}
 	
+	// METHOD printMonth: Prints days until ending day is reached
 	public static void printMonth(int day, int maxDays, int dayNumEnd) {
 		int i;
 		int j;
 		int k;
 		
+		// Prints days for 4 weeks
 		for (i = 0; i < 4; i++) {
 			System.out.printf("Week %d:", i + 1);
 			
@@ -61,6 +65,7 @@ public class Prints {
 			System.out.println();
 		}
 		
+		// Prints days for 5th week
 		System.out.printf("Week %d:", i + 1);
 		
 		for (k = day; k <= dayNumEnd; k++) {

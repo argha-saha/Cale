@@ -1,6 +1,7 @@
 
 public class Calculations {
 	
+	// METHOD dayNum: Calculates number of the day in the week from 0-6
 	public static int dayNum(int month, int day, int year) {
 		int dayNumber;
 		
@@ -10,6 +11,7 @@ public class Calculations {
 		return (dayNumber);
 	}
 
+	// METHOD leapYear: Calculates if year is a leap year (true/false)
 	public static boolean leapYear(int year) {
 		boolean isLeapYear;
 		
@@ -30,6 +32,7 @@ public class Calculations {
 		return (isLeapYear);
 	}
 	
+	// METHOD maximumDays: Calculates number of days in a given month
 	public static int maximumDays(int month, boolean isLeapYear) {
 		int maxDays = 30;
 		
@@ -59,6 +62,7 @@ public class Calculations {
 		return (maxDays);
 	}
 	
+	// METHOD dayNumberEnd: Calculates ending day based on date
 	public static int dayNumberEnd(int month, int day, boolean isLeapYear) {
 		int dayNumEnd = 0;
 		
